@@ -10,6 +10,7 @@ sudo docker swarm join-token manager
 Copy the command you got from calling `docker swarm join-token` and run it on *node2*. Then, on *node2*, run:
 
 ```
+cd /vagrant
 sudo docker stack deploy --compose-file ./docker-compose.yml web
 ```
 

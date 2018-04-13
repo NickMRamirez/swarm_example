@@ -1,0 +1,12 @@
+---
+version: '3'
+services:
+  web:
+    image: quay.io/nickmramirez/dotnetmvc
+    ports: 
+      - "8080:80"
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
